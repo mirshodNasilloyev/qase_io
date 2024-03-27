@@ -46,4 +46,19 @@ class SuiteScreen(BaseScreen):
         else:
             return False
 
+    """taking Data from new page"""
+    def switching_to_new_window(self):
+        self.driver.switch_to.window(self.driver.window_handles[1])
+
+    def open_a_new_tab(self):
+        self.driver.execute_script("window.open()")
+
+    def navigate_to_new_opened_tab(self, url_link):
+        self.open_a_new_tab()
+        self.switching_to_new_window()
+        self.driver.get(url_link)
+
+    def return_to_main_tab_with_close(self):
+        self.driver.close()
+        self.driver.switch_to.window(self.driver.window_handles[0])
 

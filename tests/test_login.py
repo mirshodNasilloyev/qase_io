@@ -4,7 +4,7 @@ from tests.test_base import BaseTest
 class TestLogin(BaseTest):
     user_email = "mnasilloyev.ios@gmail.com"
     user_password = "@Nasilloyev96"
-    low_psw = "123"
+    low_psw = "1234"
     name = "mark_manson"
 
     def test_main(self, init_chrome_driver):
@@ -16,5 +16,6 @@ class TestLogin(BaseTest):
         assert self.l_a.check_login_action_positive(self.user_email, self.user_password)
 
     def test_suite_create_and_delete(self, init_chrome_driver):
+        assert self.s_a.check_correct_data_took()
         assert self.s_a.check_suite_created(self.name)
 

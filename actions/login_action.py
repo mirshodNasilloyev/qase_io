@@ -25,6 +25,7 @@ class LoginAction(LoginScreen):
         self.is_wrong_psw_message_is_exist()
         time.sleep(2)
         assert self.is_reset_psw_pg_exist()
+        time.sleep(2)
         self.click_back_button()
         time.sleep(2)
         return True
