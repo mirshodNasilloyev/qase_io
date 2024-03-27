@@ -4,6 +4,12 @@ from screens.create_new_suite_screen import SuiteScreen
 
 class SuiteAction(SuiteScreen):
 
+    def check_correct_data_took(self):
+        self.navigate_to_new_opened_tab("https://translate.google.com/")
+        time.sleep(5)
+        self.return_to_main_tab_with_close()
+        return True
+
     def check_suite_created(self, name):
         self.click_tc_title()
         time.sleep(10)
