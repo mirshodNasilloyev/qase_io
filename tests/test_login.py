@@ -5,7 +5,7 @@ class TestLogin(BaseTest):
     user_email = "mnasilloyev.ios@gmail.com"
     user_password = "@Nasilloyev96"
     low_psw = "1234"
-    name = "mark_manson"
+    name = "mark manson"
 
     def test_main(self, init_chrome_driver):
         assert self.m_a.check_main_action()
@@ -17,5 +17,5 @@ class TestLogin(BaseTest):
 
     def test_suite_create_and_delete(self, init_chrome_driver):
         assert self.s_a.check_correct_data_took()
-        assert self.s_a.check_suite_created(self.name)
+        assert self.s_a.check_suite_created()
 

@@ -18,9 +18,9 @@ class SuiteScreen(BaseScreen):
     def click_cr_suite_btn(self):
         self.click(self.cr_suite_btn)
 
-    def enter_suite_name(self, suite_name: str):
-        self.enter_data(self.suite_name_input_fld, suite_name)
-        self.suite_title_btn = f"//*[@title=\"{suite_name}\"]"
+    # def enter_suite_name(self, suite_name: str):
+    #     self.enter_data(self.suite_name_input_fld, suite_name)
+    #     self.suite_title_btn = f"//*[@title=\"{suite_name}\"]"
 
     def click_create_confirm_btn(self):
         self.click(self.confirm_create_btn)
@@ -61,4 +61,5 @@ class SuiteScreen(BaseScreen):
     def return_to_main_tab_with_close(self):
         self.driver.close()
         self.driver.switch_to.window(self.driver.window_handles[0])
+
 
